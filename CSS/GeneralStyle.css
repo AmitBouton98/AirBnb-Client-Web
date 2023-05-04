@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: #ECF2FF;
 }
+
 /* set colors */
 :root {
     --color-1: #ECF2FF;
@@ -26,7 +28,7 @@ body.swal2-height-auto {
 /* navBar Class for head*/
 .navBar {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     align-items: center;
     height: 70px;
     justify-content: space-between;
@@ -48,7 +50,7 @@ body.swal2-height-auto {
     display: flex;
     gap: 10px;
     width: 50%;
-    color: var(--color-1);
+    /* color: var(--color-1); */
     justify-content: center;
 }
 
@@ -139,7 +141,7 @@ body.swal2-height-auto {
 #mainHeader {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 35vh;
     background-image: url("../Data/image/header.jpg");
     background-size: cover;
     background-position: center;
@@ -149,6 +151,8 @@ body.swal2-height-auto {
 /*calss to show background after scrolling */
 .scrolled {
     background-color: #d8e0e3;
+    position: sticky;
+    top: 0px;
 }
 
 /*response of the mobile*/
@@ -182,9 +186,20 @@ body.swal2-height-auto {
     color: #f65b5b;
 }
 
-.UserUpdateContainer{
+.UserUpdateContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin: 10px;
+}
+
+
+/* Style the dropdown button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }

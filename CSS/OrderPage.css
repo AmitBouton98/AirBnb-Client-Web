@@ -1,7 +1,4 @@
-body {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-}
+
 
 #dataTableSection {
     max-width: fit-content;
@@ -31,7 +28,7 @@ button:hover {
 .dataTables_wrapper .dataTables_info,
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate {
-    color: white ! important;
+    /* color: white ! important; */
     margin: 10px 0;
 }
 
@@ -44,17 +41,17 @@ select {
 }
 
 #table_id_filter input {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    background-color:rgb(4 4 4 / 20%);
+    /* color: white; */
     border-style: none;
     padding: 10px;
-    
+    border-radius: 10px;   
 }
 
 table tr,
 td,
 #dataTableSection {
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color:rgb(31 26 26 / 15%) !important;
 }
 
 img {
@@ -66,31 +63,30 @@ img {
 td {
     text-align: center;
 }
-
-#mainHeader {
-    height: 200px;
-    backdrop-filter: blur(5px);
+label{
+    color:black
 }
 
 
-.navBar {
+
+/* .navBar {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
 
 .navBar a {
     color: white;
-}
+} */
 
 .paginate_button {
     background-color: rgba(255, 255, 255, 0.2) !important;
     color: white !important;
 }
 
-#table_id_next,
+/* #table_id_next,
 #table_id_previous {
     color: white !important;
-}
+} */
 
 .popImage {
     position: absolute;
