@@ -34,9 +34,20 @@ function clearAllInputs(formEl) {
 }
 
 function RegisterUser() {
+    Swal.fire({
+    title: 'Choose avatar',
+    html:   
+    `
+    <div class="avatars">
+    <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'/>
+    <img
+        src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+    </div>
+    `
+    })
     //showTheNeededSection("login")
-    PostRegisterUser((data)=>console.log(data))
-    return false;
+    // PostRegisterUser((data)=>console.log(data))
+    // return false;
 }
 function loadUser() {
     PostloginUser(function (data) {
