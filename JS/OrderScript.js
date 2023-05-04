@@ -1,3 +1,21 @@
+$(document).ready(function () {
+    formatData()
+    document.querySelector("#userName").innerText = JSON.parse(localStorage.getItem("userName")).first + " " + JSON.parse(localStorage.getItem("userName")).last
+    // update details
+    $('#UpdateDetailsButton').click(function () {
+        UpdateDetails();
+    });
+    // logging out
+    $('#logoutButton').click(function () {
+        localStorage.clear();
+        // select all elements with the value "Back" and hide them
+        window.location.href = `../pages/index.html`
+    });
+    if (localStorage.getItem('userName') == undefined) {
+        window.location.href = `../pages/index.html`
+        return;
+    }
+});
 
 function formatData() {
     getOrdersById(JSON.parse(localStorage.getItem("userName")).id, async (data) => {
@@ -18,32 +36,14 @@ function formatData() {
             ]);
         }
         const dataTable = $("#table_id").DataTable({
-            "pageLength": 3,
-            "lengthMenu": [3, 5],
+            "pageLength": 5,
+            "lengthMenu": [5,10,100],
             "lengthChange": true,
             'data': res
         });
     })
 }
 
-$(document).ready(function () {
-    formatData()
-    document.querySelector("#userName").innerText = JSON.parse(localStorage.getItem("userName")).first + " " + JSON.parse(localStorage.getItem("userName")).last
-    // update details
-    $('#UpdateDetailsButton').click(function () {
-        UpdateDetails();
-    });
-    // logging out
-    $('#logoutButton').click(function () {
-        localStorage.clear();
-        // select all elements with the value "Back" and hide them
-        window.location.href = `../pages/index.html`
-    });
-    if (localStorage.getItem('userName') == undefined) {
-        window.location.href = `../pages/index.html`
-        return;
-    }
-});
 
 function popImage(elem) {
     if (elem.classList.contains("popImage")) {

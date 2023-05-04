@@ -174,7 +174,7 @@ function addBookButton() {
 }
 
 document.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight / 2) {
+    if (window.scrollY > 15) {
         document.querySelector(".navBar").classList.add('scrolled')
     }
     else {
