@@ -1,0 +1,148 @@
+/*Cards*/
+.appartmentSlider {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    width: fit-content;
+    align-items: center;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-1);
+    padding-top: 100px;
+}
+
+/* info in card */
+#additionInfo {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    height: 10px;
+    font-size: 80%;
+
+}
+
+/* revies in card */
+.barReview {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*  rating section*/
+.reatingSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* card class */
+.card {
+    display: inline-block;
+    background-image: linear-gradient(var(--color-1), var(--color-2), var(--color-3), var(--color-4)30%);
+    width: 300px;
+    border-radius: 10px;
+    border-bottom-right-radius: 250px 10px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    animation: scaleUp 2000ms normal;
+    margin: 20px;
+}
+
+/* imgSection class in card */
+.imgSection {
+    height: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* im in section  */
+.imgSection img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* text in card */
+.textSection {
+    margin: 10px;
+}
+
+/* style for button */
+.card footer input {
+    padding: 10px;
+    background-color: #f29075;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 500ms;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.8);
+    margin:0 3px;
+}
+
+/* rating in card*/
+.reatingSection p {
+    font-weight: 700;
+}
+
+/* hover for button */
+.card footer input:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f29075;
+}
+
+/* description style in card */
+.description {
+    height: 100px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* name style in card */
+.name {
+    height: 40px;
+    font-size: 100%;
+    word-wrap: break-word;
+}
+
+/* style for footer(bed rooms, price, button) */
+.card footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+/*Antimation for the card*/
+@keyframes scaleUp {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  
+  

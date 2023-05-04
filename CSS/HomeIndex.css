@@ -1,0 +1,115 @@
+body {
+    background-image: url("../Data/image/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* .signInUpCard input ,.signInUpCard .button{
+    background-color: var(--color-4);
+    border-style: none;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+} */
+.signInUpCard {
+    margin: 0 auto;
+    border-radius: 25px;
+    width: 450px;
+    background: hsl(221, 100%, 96%, 0.8);
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    margin: 0 30px;
+}
+
+form {
+    padding: 0 40px;
+}
+
+.row {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin: 10px;
+    border-radius: 25px;
+    padding: 10px;
+    align-items: center;
+}
+
+.row input[type=text],
+.row input[type=password] {
+    border-style: none;
+    background: transparent;
+    color: black;
+    padding: 5px;
+    font: 18px;
+}
+
+i {
+    font-size: 100%;
+}
+
+.passwords i[class="fa-solid fa-eye"] {
+    cursor: pointer;
+}
+
+.row input[type=text]:focus,
+.row input[type=password]:focus {
+    outline: none;
+}
+
+/* #login{
+    display: none;
+} */
+#register {
+    display: none;
+}
+
+#forget {
+    display: none;
+}
+
+/*response of the mobile*/
+@media (max-width:450px) {
+    .signInUpCard {
+        width: 300px;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+}
+
+.buttons {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    padding: 0;
+}
+
+.buttons input {
+    background-color: var(--color-4);
+    border-style: none;
+    border-radius: 15px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#forgetButton {
+    background-color: transparent;
+    color: red;
+}

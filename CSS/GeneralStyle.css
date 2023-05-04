@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ECF2FF;
+}
+/* set colors */
+:root {
+    --color-1: #ECF2FF;
+    --color-2: #3E54AC;
+    --color-3: #655DBB;
+    --color-4: #BFACE2;
+    --color-5: rgba(0, 0, 0, 0.7);
+}
+
+/* set background for body */
+/* user the class of fixed height to prevent the auto assign from the swal */
+html body.fixed-height,
+body.swal2-height-auto {
+    background-color: var(--color-1);
+    height: 100vh !important;
+}
+
+
+/* navBar Class for head*/
+.navBar {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: all 500ms;
+}
+
+.red {
+    color: red
+}
+
+.green {
+    color: green;
+}
+
+.pages {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    color: var(--color-1);
+    justify-content: center;
+}
+
+.user {
+    padding: 20px;
+}
+
+/* img in head */
+.navBar img {
+    height: 50%;
+    padding: 30px;
+
+}
+
+/* a in head navbar */
+.navBar a,
+.user p {
+    text-align: center;
+    color: var(--color-5);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+/* hover */
+.navBar a:hover {
+    color: var(--color-4);
+}
+
+/* search style */
+.searchSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-1);
+}
+
+/*the show buttons*/
+.searchFilter input[type="button"],
+.searchFilter button,
+.user #logoutButton {
+    background-color: var(--color-4);
+    border-style: none;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/*The text fileds for the show*/
+.searchFilter input[type="text"] {
+    border-style: none;
+    border-radius: 15px;
+    height: 20px;
+    padding: 5px;
+    max-width: 200px;
+}
+
+/* define style for searches */
+.searchFilter {
+    background-color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 30px;
+    color: var(--color-5);
+}
+
+/*the pop message style */
+#messageBox {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px 0 black;
+    padding: 20px;
+}
+
+/*The header of the pages the main one*/
+#mainHeader {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url("../Data/image/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*calss to show background after scrolling */
+.scrolled {
+    background-color: #d8e0e3;
+}
+
+/*response of the mobile*/
+@media (max-width:412px) {
+    .searchFilter {
+        flex-direction: column;
+        height: fit-content;
+        padding: 5px;
+    }
+
+}
+
+/* style for button welcome user */
+.user button {
+    background-color: #fff;
+    color: var(--color-5);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* hover style for button welcome user */
+
+.user button:hover {
+    background-color: #ddd;
+    color: red
+}
+
+.user p {
+    color: #f65b5b;
+}
+
+.UserUpdateContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px;
+}

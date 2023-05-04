@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBnb</title>
+    <link rel="icon" href="../Data/image/LogoIconAirbnb.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/CardStyle.css">
+    <link rel="stylesheet" href="../CSS/GeneralStyle.css">
+    <script src="../JS/ajaxCalls.js"></script>
+    <script src="../Data/airBNB.js"></script>
+    <script src="../JS/ServerJS.js"></script>
+    <script src="../JS/LogInScript.js"></script>
+    <script src="../JS/ManageScript.js"></script>
+    <script src="../JS/HomeScripts.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <!-- Indludes for Picking date range amit-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js"></script>
+
+    <!-- Indludes for Picking date range khaled-->
+</head>
+
+<body onload="init('manager')">
+    <header id="mainHeader">
+        <nav class="navBar">
+            <img src="../Data/image/logo.png" alt="">
+            <section class="pages">
+                <a href="./home.html">HOME</a> |
+                <a href="./manage.html">MANAGER</a> |
+                <a href="./Orders.html">ORDERS</a>
+            </section>
+            <section class="user">
+                <p>welcome,
+                    <span id="userName"></span>
+                    <button id="UpdateDetailsButton">Update Details</button>
+                    <button class="buttonStyle" id="logoutButton">Log out</button>
+                </p>
+            </section>
+        </nav>
+    </header>
+    <div class="searchFilter">
+        <input type="button" id="all1" value="Show All" onclick="lambd:Get('all')">
+        <div>
+            <label for="search-price">Show by Price:</label>
+            <input type="text" id="search-price" placeholder="Price">
+            <input type="button" id="price2" value="Show" onclick="lambd:Get('price')">
+        </div>
+        <div>
+            <label for="search-rating">Show by Rate:</label>
+            <input type="text" id="search-rating" placeholder="Rating">
+            <input type="button" id="rating3" value="Show" onclick="lambd:Get('rating')">
+        </div>
+    </div>
+    <section class="appartmentSlider"></section>
+
+</body>
+
+</html>

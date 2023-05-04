@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBnb</title>
+
+    <link rel="icon" href="../Data/image/LogoIconAirbnb.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="../CSS/CardStyle.css">
+        <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+        <script src="../JS/forms.js"></script>
+        <script src="../JS/ajaxCalls.js"></script>
+        <script src="../Data/airBNB.js"></script>
+        <script src="../JS/ServerJS.js"></script>
+        <script src="../JS/HomeScripts.js"></script>
+        <!-- <script src="../JS/ManagerScript.js"></script> -->
+        <link rel="stylesheet" href="../CSS/HomeIndex.css">
+        <script src="../JS/LogInScript.js"></script>
+        
+        <link rel="stylesheet" href="../CSS/GeneralStyle.css">
+</head>
+
+<body>
+    <div id="login" class="signInUpCard">
+        <form id="Plogin" action="">
+            <h1>Login</h1>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-envelope"></i></label>
+                <input type="text"  placeholder="Enter your email" required id="loginEmail" oninput="validateEmail('loginEmail')">
+            </div>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-key"></i></label>
+                <input type="password" id="Loginpassword" placeholder="Enter your password" required>
+                <i class="fa-solid fa-eye" onclick="showPassword('Loginpassword',this)"></i>
+            </div>
+            <div class="row buttons" >
+                <input type="submit" value="LOGIN" id="loginUser">
+                <input type="button" value="REGISTER">
+                <input type="button" value="Forget Password?" id="forgetButton">
+            </div>
+        </form>
+    </div>
+    <div id="register" class="signInUpCard">
+        <form id="Pregister" action="">
+            <h1>Register</h1>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-user"></i></label>
+                <input type="text" id="FirstRegister" placeholder="Enter your first name" required>
+            </div>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-user"></i></label>
+                <input type="text" id="LastRegister" placeholder="Enter your last name" required>
+            </div>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-phone"></i></label>
+                <input type="text" id="PhoneRegister" placeholder="Enter your phone number" required pattern="[0-9]{10}" oninput="validatePhone()">
+            </div>
+            <!-- <div class="row">
+                <label for=""><i class="fa-solid fa-id-card"></i></label>
+                <input type="text" id="IdRegister" placeholder="Enter your id" required oninput="validateId()">
+            </div> -->
+            <div class="row">
+                <label for=""><i class="fa-solid fa-globe"></i></label>
+                <input type="text" id="CountryRegister" placeholder="Enter your country" required>
+            </div>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-envelope"></i></label>
+                <input type="text" id="EmailRegister" placeholder="Enter your email" required oninput="validateEmail('EmailRegister')">
+            </div>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-key"></i></label>
+                <input type="password" id="PasswordRegister" placeholder="Enter your password" required oninput="validatePassword(this)">
+                <i class="fa-solid fa-eye" onclick="showPassword('PasswordRegister',this)"></i>
+            </div>
+            <div>
+                <ul>
+                    <li class="red">At least length 8 chars </li>
+                    <li class="red">At least One number </li>
+                    <li class="red">At least One small latter </li>
+                    <li class="red">At least One capital latter </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-key"></i></label>
+                <input type="password" id="Verifypassword" placeholder="Enter your password" required oninput="validateVerifyPassword()">
+                <i class="fa-solid fa-eye" onclick="showPassword('Verifypassword',this)"></i>
+            </div>
+            <div class="row buttons">
+                <input type="submit" value="Create">
+                <input type="button" value="Back">
+            </div>
+        </form>
+    </div>
+    <div id="forget" class="signInUpCard">
+        <form action="" id="recoveryEmail">
+            <h1>ForgetPassword</h1>
+            <div class="row">
+                <label for=""><i class="fa-solid fa-envelope"></i></label>
+                <input id="resetpasswordEmail" type="text" placeholder="Enter your email" required >
+            </div>
+            <div class="row buttons">
+                <input type="submit" value="Reset Password">
+                <input type="button" value="Back">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
