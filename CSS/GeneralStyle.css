@@ -206,3 +206,12 @@ body.swal2-height-auto {
     border: none;
     cursor: pointer;
 }
+
+.avatars {
+    display: flex;
+    align-items: center;
+
+}
+.avatars img {
+    width: 200px;
+}
