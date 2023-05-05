@@ -113,3 +113,7 @@ i {
     background-color: transparent;
     color: red;
 }
+
+label[for^=avatar] img + input[type="radio"]:checked{
+    background-color: red;
+}

@@ -208,10 +208,8 @@ body.swal2-height-auto {
 }
 
 .avatars {
-    display: flex;
-    align-items: center;
-
+    grid-template-columns: 1fr 1fr;
 }
 .avatars img {
-    width: 200px;
+    width: 100%;
 }

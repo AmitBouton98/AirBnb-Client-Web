@@ -32,7 +32,6 @@
         <link rel="stylesheet" href="../CSS/GeneralStyle.css">
 </head>
 
-<body>
     <div id="login" class="signInUpCard">
         <form id="Plogin" action="">
             <h1>Login</h1>
@@ -55,51 +54,72 @@
     <div id="register" class="signInUpCard">
         <form id="Pregister" action="">
             <h1>Register</h1>
-            <div class="row">
-                <label for=""><i class="fa-solid fa-user"></i></label>
-                <input type="text" id="FirstRegister" placeholder="Enter your first name" required>
-            </div>
-            <div class="row">
-                <label for=""><i class="fa-solid fa-user"></i></label>
-                <input type="text" id="LastRegister" placeholder="Enter your last name" required>
-            </div>
-            <div class="row">
-                <label for=""><i class="fa-solid fa-phone"></i></label>
-                <input type="text" id="PhoneRegister" placeholder="Enter your phone number" required pattern="[0-9]{10}" oninput="validatePhone()">
-            </div>
-            <!-- <div class="row">
-                <label for=""><i class="fa-solid fa-id-card"></i></label>
-                <input type="text" id="IdRegister" placeholder="Enter your id" required oninput="validateId()">
-            </div> -->
-            <div class="row">
-                <label for=""><i class="fa-solid fa-globe"></i></label>
-                <input type="text" id="CountryRegister" placeholder="Enter your country" required>
-            </div>
-            <div class="row">
-                <label for=""><i class="fa-solid fa-envelope"></i></label>
-                <input type="text" id="EmailRegister" placeholder="Enter your email" required oninput="validateEmail('EmailRegister')">
-            </div>
-            <div class="row">
-                <label for=""><i class="fa-solid fa-key"></i></label>
-                <input type="password" id="PasswordRegister" placeholder="Enter your password" required oninput="validatePassword(this)">
-                <i class="fa-solid fa-eye" onclick="showPassword('PasswordRegister',this)"></i>
-            </div>
-            <div>
-                <ul>
-                    <li class="red">At least length 8 chars </li>
-                    <li class="red">At least One number </li>
-                    <li class="red">At least One small latter </li>
-                    <li class="red">At least One capital latter </li>
-                </ul>
+            <div class="firstlly">
+                
+                <div class="row">
+                    <label for=""><i class="fa-solid fa-user"></i></label>
+                    <input type="text" id="FirstRegister" placeholder="Enter your first name" required>
+                </div>
+                <div class="row">
+                    <label for=""><i class="fa-solid fa-user"></i></label>
+                    <input type="text" id="LastRegister" placeholder="Enter your last name" required>
+                </div>
+                <div class="row">
+                    <label for=""><i class="fa-solid fa-phone"></i></label>
+                    <input type="text" id="PhoneRegister" placeholder="Enter your phone number" required pattern="[0-9]{10}" oninput="validatePhone()">
+                </div>
+                <!-- <div class="row">
+                    <label for=""><i class="fa-solid fa-id-card"></i></label>
+                    <input type="text" id="IdRegister" placeholder="Enter your id" required oninput="validateId()">
+                </div> -->
+                <div class="row">
+                    <label for=""><i class="fa-solid fa-globe"></i></label>
+                    <input type="text" id="CountryRegister" placeholder="Enter your country" required>
+                </div>
+                <div class="row">
+                    <label for=""><i class="fa-solid fa-envelope"></i></label>
+                    <input type="text" id="EmailRegister" placeholder="Enter your email" required oninput="validateEmail('EmailRegister')">
+                </div>
+                <div class="row">
+                    <label for=""><i class="fa-solid fa-key"></i></label>
+                    <input type="password" id="PasswordRegister" placeholder="Enter your password" required oninput="validatePassword(this)">
+                    <i class="fa-solid fa-eye" onclick="showPassword('PasswordRegister',this)"></i>
+                </div>
+                <div>
+                    <ul>
+                        <li class="red">At least length 8 chars </li>
+                        <li class="red">At least One number </li>
+                        <li class="red">At least One small latter </li>
+                        <li class="red">At least One capital latter </li>
+                    </ul>
+                </div>
             </div>
             <div class="row">
                 <label for=""><i class="fa-solid fa-key"></i></label>
                 <input type="password" id="Verifypassword" placeholder="Enter your password" required oninput="validateVerifyPassword()">
                 <i class="fa-solid fa-eye" onclick="showPassword('Verifypassword',this)"></i>
             </div>
+            <div class="lastley">
+                <p style="text-align: center;">Choose avatar</label>
+                <div class=" row avatars">
+                    <div>
+                        <label for="avatar1">
+                            <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+                        </label>
+                        <input type="radio" name="avatar" id="avatar1">
+                    </div>
+                    <div>
+                        <label for="avatar2">
+                            <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairTheCaesar&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+                        </label>
+                        <input type="radio" name="avatar" id="avatar2">
+                    </div>
+                </div>
+            </div>
             <div class="row buttons">
                 <input type="submit" value="Create">
                 <input type="button" value="Back">
+                <input type="button" value="Continue">
             </div>
         </form>
     </div>
