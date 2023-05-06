@@ -10,7 +10,7 @@ const showPassword = (inputID, eyeIcon) => {
 }
 
 $(document).ready(function () {
-    showTheNeededSection("login")
+    
     // add click event listener for form buttons
     $('input[value="Back"]').click(() => showTheNeededSection("login"));
     $('input[value="Forget Password?"]').click(() => showTheNeededSection("forget"));
@@ -20,6 +20,7 @@ $(document).ready(function () {
     $('#Plogin').submit(loadUser)
     $('#Pregister').submit(RegisterUser)
     $('#recoveryEmail').submit(() => resetPassword('resetpasswordEmail'))
+    showTheNeededSection("login")
 });
 
 function showTheNeededSection(sectionName) {
@@ -138,8 +139,8 @@ function validateVerifyPassword() {
 
 function resetPassword(buttonId) {
     const emialEl = document.querySelector(`#${buttonId}`)
-    // const emialEl = document.querySelector('#userEmailWelcome')
-    console.log(emialEl)
+
+    document.querySelector("#userEmailWelcome").textContent  = emialEl.value
     getUserByEmail(emialEl.value, (data) => {
         swal.fire("Key sended to your email", "Check your spam email search from amit.khaled.airbnb", "success");
         showTheNeededSection("resetpasswordForm")
