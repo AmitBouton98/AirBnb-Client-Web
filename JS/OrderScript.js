@@ -32,11 +32,13 @@ function formatData() {
                 element.startDate.slice(0, 10),
                 element.endDate.slice(0, 10),
                 element.pricePerNight,
-                // need to change the price per night in button update. devide it between the number of nights
-                `<img id="Flat${element.flatId}" onclick="ShowPickRangeOfDates(this , ${element.pricePerNight / ((new Date(element.endDate) - new Date(element.startDate)) / oneDayMs)}, UpdateOrder,${element.id})" src="../Data/image/5278658-removebg-preview.png"/>`,
+                // need to change the price per night in button update. devide it between the number of night
+                `<i id="Flat${element.flatId}" onclick="ShowPickRangeOfDates(this , ${element.pricePerNight / ((new Date(element.endDate) - new Date(element.startDate)) / oneDayMs)}, UpdateOrder,${element.id})" class="fa-solid fa-pen-to-square"></i>`,
+                // `<img id="Flat${element.flatId}" onclick="ShowPickRangeOfDates(this , ${element.pricePerNight / ((new Date(element.endDate) - new Date(element.startDate)) / oneDayMs)}, UpdateOrder,${element.id})" src="../Data/image/5278658-removebg-preview.png"/>`,
                 //`<button onclick="DeleteOrder(${element.id})" >delete</button>`
                 // `<img id="Flat${element.flatId}" onclick="ShowPickRangeOfDates(this , ${element.pricePerNight / ((new Date(element.endDate) - new Date(element.startDate)) / oneDayMs)}, UpdateOrder,${element.id})" src="../Data/image/66-664202_update-button-clip-art-png-update-button-removebg-preview.png"/>`
-                `<img onclick="DeleteOrder(${element.id})" src="../Data/image/delete-icon-png-16x16-22.jpg" />`
+                `<i onclick="DeleteOrder(${element.id})" class="fa-solid fa-trash"></i>`
+                // `<img onclick="DeleteOrder(${element.id})" src="../Data/image/delete-icon-png-16x16-22.jpg" />`
             ]);
         }
         const dataTable = $("#table_id").DataTable({
