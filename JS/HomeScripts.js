@@ -18,6 +18,8 @@ function init(namePage) {
     });
     if (namePage === 'client') rendaer()
     document.querySelector("#userName").innerText = JSON.parse(localStorage.getItem("userName")).first + " " + JSON.parse(localStorage.getItem("userName")).last
+    document.querySelector(".userImage img").setAttribute("src",JSON.parse(localStorage.getItem("userName")).profile_img)
+
 }
 
 
@@ -166,7 +168,7 @@ function addBookButton() {
         elem.setAttribute("type", "button")
         inputBtn.parentElement.appendChild(elem);
         elem.onclick = function clicked() {
-            ShowPickRangeOfDates(this, "" , PostOrder)
+            ShowPickRangeOfDates(this, "", PostOrder)
             // bookAppartment(this.id.substring(2))
             // this.parentElement.parentElement.parentElement.remove()
         }

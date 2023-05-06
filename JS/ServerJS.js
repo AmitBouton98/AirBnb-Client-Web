@@ -53,6 +53,15 @@ function PostResetPassword(callback, key, id) {
     return false;
 }
 function PostRegisterUser(callback) {
+
+    var radios = document.getElementsByName('avatar');
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+            radios = radios[i].value
+            break;
+        }
+    }
     NewUser = {
         first: $("#FirstRegister").val(),
         last: $("#LastRegister").val(),
@@ -60,8 +69,10 @@ function PostRegisterUser(callback) {
         country: $("#CountryRegister").val(),
         email: $("#EmailRegister").val(),
         password: $("#PasswordRegister").val(),
-        PhoneNumber: $("#PhoneRegister").val()
+        PhoneNumber: $("#PhoneRegister").val(),
+        Profile_img: radios
     }
+    console.log(NewUser)
     ajaxCall("POST", `${api}/WebUsers`, JSON.stringify(NewUser), function (data) {
         swal.fire("Registered to the server!", "Great Job", "success");
         setTimeout(function () {
@@ -136,7 +147,7 @@ async function getFlatById(flatId, callback = "") {
             reject(error);
         });
     });
-    
+
 }
 
 function sendToServer(flatId) {
@@ -220,7 +231,7 @@ function UpdateOrder(callback, UserId, FlatId, StartDate, EndDate, PricePerNight
     // to prevent refreshing the page evrey time 
     return false;
 }
-function DeleteOrderById(callback, OrderId){
+function DeleteOrderById(callback, OrderId) {
     ajaxCall("Delete", `${api}/Orders/${OrderId}`, "", function (data) {
         swal.fire("Deleted Sucsessfully!", "", "success");
         //console.log(data)

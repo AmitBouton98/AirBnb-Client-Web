@@ -167,7 +167,7 @@ function resetPassword(buttonId) {
         // console.log(new Date())
         $('#reserPasswordEmail').submit(() => {
             showTheNeededSection("resetpasswordForm")
-            RestPassCheck(document.querySelector(`#uniqueKey`).value, new Date(), data)
+            RestPassCheck(document.querySelector(`#uniqueKey`).value, data)
             return false
         })
 
@@ -202,7 +202,7 @@ function resetPassword(buttonId) {
     })
     return false
 }
-function RestPassCheck(key, date, user) {
+function RestPassCheck(key, user) {
     // need to create call to server that send the key and date and check if its match
     // if its match in secuss call back function it does the changes (using update)
     // * we have the user here so we can use the update and change only the password
