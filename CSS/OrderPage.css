@@ -114,15 +114,19 @@ h1 {
         .responsive9 {
             display: block;
         }
+        
 }
 @media (min-width:914px) {
     .responsive9 {
         display: none;
     }
     #OrderInfoPart {
-        display: none;
+        display: none !important;
     }
 }
+ #OrderInfoPart {
+     display: none;
+ }
 i {
     cursor: pointer;
 }
