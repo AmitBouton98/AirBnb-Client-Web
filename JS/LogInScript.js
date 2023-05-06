@@ -14,22 +14,25 @@ $(document).ready(function () {
     // add click event listener for form buttons
     $('input[value="Back"]').click(() => showTheNeededSection("login"));
     $('input[value="Continue"]').click(() => {
-        $(".lastley").show()
-        $(".firstlly").hide()
-        $('input[value="Continue"]').hide()
-        $('input[value="Create"]').show()
-        $('input[value="Back"]').click(() => {
-            showTheNeededSection("register")
-            $(".lastley").hide()
-            $(".firstlly").show()
-            $('input[value="Create"]').hide()
-            $('input[value="Continue"]').show()
+        if (CheckValidation()) {
+            $(".lastley").show()
+            $(".firstlly").hide()
+            $('input[value="Continue"]').hide()
+            $('input[value="Create"]').show()
             $('input[value="Back"]').click(() => {
-                showTheNeededSection("login")
-            });
-        })
-        showTheNeededSection("register")
+                showTheNeededSection("register")
+                $(".lastley").hide()
+                $(".firstlly").show()
+                $('input[value="Create"]').hide()
+                $('input[value="Continue"]').show()
+                $('input[value="Back"]').click(() => {
+                    showTheNeededSection("login")
+                });
+            })
+            showTheNeededSection("register")
+        }
     });
+
 
     $('input[value="Forget Password?"]').click(() => showTheNeededSection("forget"));
     $('input[value="REGISTER"]').click(() => showTheNeededSection("register"));
@@ -53,7 +56,12 @@ function clearAllInputs(formEl) {
     // this function will reset every input elemnt in the form
     formEl.reset()
 }
-
+function CheckValidation() {
+    if(validatePhone() && validateEmail('EmailRegister') && validatePassword(document.getElementById("PasswordRegister")) && validateVerifyPassword()){
+        return true
+    }
+    return false
+}
 function RegisterUser() {
     showTheNeededSection("login")
     PostRegisterUser((data) => console.log(data))
@@ -75,8 +83,11 @@ function validatePhone() {
     const phoneValue = phoneInput.value.trim();
     if (phoneValue.length != 10 || !/^\d+$/.test(phoneValue)) {
         phoneInput.setCustomValidity("Please enter a valid phone number");
+        phoneInput.reportValidity();
+        return false
     } else {
         phoneInput.setCustomValidity("");
+        return true
     }
 }
 // function validateId() {
@@ -100,7 +111,10 @@ function validateEmail(id) {
         emailInput.setCustomValidity("Please enter a valid email address");
     } else {
         emailInput.setCustomValidity("");
+        return true
     }
+    emailInput.reportValidity();
+    return false
 }
 function validatePassword(elem) {
     const passwordInput = elem;
@@ -137,10 +151,12 @@ function validatePassword(elem) {
         valditTexts[3].classList = "green"
     }
     if (!/\d/.test(passwordValue) || !/[a-z]/.test(passwordValue) || !/[A-Z]/.test(passwordValue || passwordValue.length < 8)) {
-
+        passwordInput.reportValidity();
+        return false;
     }
     else {
         passwordInput.setCustomValidity("");
+        return true
     }
 }
 
@@ -153,7 +169,10 @@ function validateVerifyPassword() {
         document.getElementById("Verifypassword").setCustomValidity("Passwords must match");
     } else {
         document.getElementById("Verifypassword").setCustomValidity("");
+        return true
     }
+    document.getElementById("Verifypassword").reportValidity();
+    return false
 }
 
 function resetPassword(buttonId) {
