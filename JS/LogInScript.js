@@ -192,7 +192,7 @@ function RestPassCheck(key, date, user) {
         user.password = document.querySelector(`#resetpasswordOne`).value
         UpdateUser((dat) => { // update the User if Match
             console.log(dat)
-        }, data)
+        }, user)
     })
 
 
