@@ -157,7 +157,9 @@ body.swal2-height-auto {
     padding: 5px;
     max-width: 200px;
 }
-
+#price2,#rating3 {
+    margin-top: 10px;
+}
 /* define style for searches */
 .searchFilter {
     background-color: var(--color-1);
@@ -167,6 +169,10 @@ body.swal2-height-auto {
     padding-top: 20px;
     gap: 30px;
     color: var(--color-5);
+    flex-wrap: wrap;
+}
+.centerText {
+    text-align: center;
 }
 
 /*the pop message style */
