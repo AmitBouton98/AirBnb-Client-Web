@@ -45,6 +45,13 @@ function PostloginUser(callback, email, password) {
     return false;
 }
 
+function PostResetPassword(callback, key, id) {
+    ajaxCall("GET", `${api}/WebUsers/CheckIfKeyCorrect?key=${key}&id=${id}`, "", function (data) {
+        swal.fire("Changed Sucsessfully!", "", "success");
+        callback(data)
+    }, errorCB);
+    return false;
+}
 function PostRegisterUser(callback) {
     NewUser = {
         first: $("#FirstRegister").val(),
@@ -129,6 +136,7 @@ async function getFlatById(flatId, callback = "") {
             reject(error);
         });
     });
+    
 }
 
 function sendToServer(flatId) {
@@ -221,31 +229,38 @@ function DeleteOrderById(callback, OrderId){
             window.location.reload();
         }, 1000); // 1 seconds delay
     }, errorRG);
+    return false;
 }
 function successClinetCB(data) {
     swal.fire(data ? "Added Succesfuly" : "Request denide", data ? "" : "The appartemnt is already in the system add another appartment", data ? "success" : "error");
     //popMessage(data ? "Added Succesfuly" : "Request denide", data ? "" : "The appartemnt is already in the system add another appartment");
+    return false;
 }
 
 function successMannagerCB(data) {
     swal.fire((data[1].length ?? 1) > 0 ? `${data[0]} succses` : "Error", data[1].length > 0 || data[1] == true ? "" : "There are no Data to Show", (data[1].length ?? 1) > 0 ? "success" : "error");
     //popMessage((data[1].length ?? 1) > 0 ? `${data[0]} succses` : "Error", data[1].length > 0 || data[1] == true ? "" : "There are no Data to Show");
+    return false;
 }
 function errorLG(errs) {
     // swal.fire("error : " + errs.status, errs.responseJSON.error + "<br/>Please check your email and password and try again.", "error");
     swal.fire("error : " + errs.status, errs.responseText + "<br/>Please check your email and password and try again.", "error");
+    return false;
 }
 function errorRG(errs) {
     swal.fire("error : " + errs.status, errs.responseText + "!!" + "<br/>Please try logging in instead.", "error");
+    return false;
 }
 
 function errorCB(errs) {
     // show error massage that came as a html elemnts
     swal.fire(errs.status, errs.responseText, "error");
+    return false;
     //popMessage(errs.status, errs.responseText);
 }
 function errorNotEmailFound() {
     swal.fire("Oops ", "<br/>There is no email registered.", "error");
+    return false;
 }
 
 
