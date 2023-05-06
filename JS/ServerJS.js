@@ -68,50 +68,50 @@ function PostRegisterUser(callback) {
     // to prevent refreshing the page evrey time 
     return false;
 }
-function PostResetPassword(key, newpassword, id) {
-    console.log(newpassword)
-    ajaxCall("POST", `${api}/WebUsers/ResetPassword?id=${id}&key=${key}&newPassword=${newpassword}`, '', function (data) {
-        console.log(data)
-        if (data) {
-            const resetFormEl = $("#resetpasswordForm")
-            resetFormEl.remove()
-            swal.fire(
-                {
-                    icon: 'success',
-                    title: 'Reset password succsefuly',
-                    text: "Great Job",
-                    showConfirmButton: true,
-                    position: 'center'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.close()
-                    }
-                })
-        } else {
-            swal.fire(
-                {
-                    icon: 'error',
-                    title: 'something went worng!!',
-                    text: "Bad Job",
-                    showConfirmButton: true,
-                    position: 'center'
+// function PostResetPassword(key, newpassword, id) {
+//     console.log(newpassword)
+//     ajaxCall("POST", `${api}/WebUsers/ResetPassword?id=${id}&key=${key}&newPassword=${newpassword}`, '', function (data) {
+//         console.log(data)
+//         if (data) {
+//             const resetFormEl = $("#resetpasswordForm")
+//             resetFormEl.remove()
+//             swal.fire(
+//                 {
+//                     icon: 'success',
+//                     title: 'Reset password succsefuly',
+//                     text: "Great Job",
+//                     showConfirmButton: true,
+//                     position: 'center'
+//                 }).then((result) => {
+//                     if (result.isConfirmed) {
+//                         window.close()
+//                     }
+//                 })
+//         } else {
+//             swal.fire(
+//                 {
+//                     icon: 'error',
+//                     title: 'something went worng!!',
+//                     text: "Bad Job",
+//                     showConfirmButton: true,
+//                     position: 'center'
 
-                });
-        }
-    },
-        () => swal.fire(
-            {
-                icon: 'error',
-                title: 'something went worng!',
-                text: "Bad Job",
-                showConfirmButton: true,
-                position: 'center'
+//                 });
+//         }
+//     },
+//         () => swal.fire(
+//             {
+//                 icon: 'error',
+//                 title: 'something went worng!',
+//                 text: "Bad Job",
+//                 showConfirmButton: true,
+//                 position: 'center'
 
-            }
+//             }
 
-        ));
-    return false;
-}
+//         ));
+//     return false;
+// }
 function getOrdersById(userId, callback) {
     ajaxCall("Get", `${api}/Orders/GetByUserId?userId=${userId}`, "", function (data) {
         //swal.fire("Update Sucsessfully!", "", "success");
