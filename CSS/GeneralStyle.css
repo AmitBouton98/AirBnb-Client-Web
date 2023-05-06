@@ -219,9 +219,9 @@ body.swal2-height-auto {
 
 /*response of the mobile*/
 @media (max-width:412px) {
-    .pages {
+    /* .pages {
         visibility: hidden;
-    }
+    } */
     .searchFilter {
         flex-direction: column;
         height: fit-content;
