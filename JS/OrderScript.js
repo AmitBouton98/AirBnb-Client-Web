@@ -41,7 +41,12 @@ function formatData() {
             "pageLength": 5,
             "lengthMenu": [5,10,100],
             "lengthChange": true,
-            'data': res
+            "responsive": true,
+            "columnDefs": [
+                        { responsivePriority: 1, targets: 0 },
+                        { responsivePriority: 2, targets: 4 }
+                    ],
+                'data': res
         });
     })
 }
