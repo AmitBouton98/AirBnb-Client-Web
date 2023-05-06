@@ -67,6 +67,7 @@ function ShowPickRangeOfDates(btn, price = "", func, orderId = "") {
 
             const maxNights = 10;
             const nights = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
+            console.log(new Date())
             if (startDate.toString() === 'Invalid Date' || endDate.toString() === 'Invalid Date') {
                 Swal.showValidationMessage(`Please enter a valid start date and end date`);
             } else
@@ -74,6 +75,8 @@ function ShowPickRangeOfDates(btn, price = "", func, orderId = "") {
                     Swal.showValidationMessage(`The start date can't be after the end date`);
                 } else if (nights > maxNights) {
                     Swal.showValidationMessage(`The date range can't be longer than ${maxNights} nights`);
+                } else if(new Date() > startDate){
+                    Swal.showValidationMessage(`The start date can't be in the past`);
                 } else {
                     return { startDate: startDate.toLocaleDateString('zh-Hans-CN'), endDate: endDate.toLocaleDateString('zh-Hans-CN') };
                 }
