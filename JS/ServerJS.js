@@ -72,13 +72,10 @@ function PostRegisterUser(callback) {
         PhoneNumber: $("#PhoneRegister").val(),
         Profile_img: radios
     }
-    console.log(NewUser)
     ajaxCall("POST", `${api}/WebUsers`, JSON.stringify(NewUser), function (data) {
         swal.fire("Registered to the server!", "Great Job", "success");
         setTimeout(function () {
-            getUserByEmail($("#EmailRegister").val(), (data) => {
-                signInUser(data);
-            })
+            signInUser(data);
             //signInUser(NewUser);
         }, 1500); // 1.5 seconds delay
         callback(data);

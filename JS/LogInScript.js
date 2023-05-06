@@ -28,6 +28,7 @@ $(document).ready(function () {
                 showTheNeededSection("login")
             });
         })
+        showTheNeededSection("register")
     });
 
     $('input[value="Forget Password?"]').click(() => showTheNeededSection("forget"));
