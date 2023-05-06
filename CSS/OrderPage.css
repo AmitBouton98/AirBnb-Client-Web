@@ -102,3 +102,75 @@ h1 {
     text-align: center;
     padding: 20px;
 }
+
+@media (max-width:914px) {
+        .responsive2,
+        .responsive3,
+        .responsive4,
+        .responsive5,
+        .responsive6 {
+            display: none;
+        }
+        .responsive9 {
+            display: block;
+        }
+}
+@media (min-width:914px) {
+    .responsive9 {
+        display: none;
+    }
+    #OrderInfoPart {
+        display: none;
+    }
+}
+i {
+    cursor: pointer;
+}
+#OrderInfoPart {
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    /* background-color: gray; */
+    height: 500px;
+    overflow: hidden;
+    border-top: 10px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 10px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+#imageCell {
+    height: 30%;
+    overflow: hidden;
+}
+
+#imageCell img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#OrderInfoCell {
+    padding: 10px;
+}
+
+#datesCell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#footerCell button {
+    background-color: #f65b5b;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#footerCell button:hover {
+    background-color: white;
+    color: #f65b5b;
+}

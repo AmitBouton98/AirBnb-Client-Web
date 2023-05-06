@@ -56,8 +56,7 @@
         </section>
         <section class="user">
             <div class="userImage">
-                <img
-                    src='' />
+                <img src="null" />
             </div>
             <p class="nameArea">welcome, <span id="userName"></span></p>
             <div class="settingsArea">
@@ -84,9 +83,38 @@
                     <th>Price</th>
                     <th>Update</th>
                     <th>Delete</th>
+                    <th>Show</th>
                 </tr>
             </thead>
         </table>
+    </div>
+    <div id="OrderInfoPart">
+        <h1>Order info</h1>
+        <div id="imageCell">
+            <img src="https://a0.muscache.com/pictures/10272854/8dcca016_original.jpg" alt="">
+        </div>
+        <div id="OrderInfoCell">
+            <div id="OrderIdsCell">
+                <h1>Order Id: <span id="OrderIdCell">123</span></h1>
+                <h2>Flat Id: <span id="FlatIdCell">123</span></h2>
+            </div>
+            <div id="datesCell">
+                <div class="DateCell">
+                    <h3>StartDate</h3>
+                    <p id="startDateCell">12/5/23 14:5</p>
+                </div>
+                <div class="DateCell">
+                    <h3>StartDate</h3>
+                    <p id="endDateCell">12/5/23 14:5</p>
+                </div>
+            </div>
+            <div id="footerCell">
+                <div id="priceCell">
+                    <h2>Order Price: <span id="OrderIdCell">123</span> $</h2>
+                </div>
+                <button onclick="closeOrderInfo()">Close</button>
+            </div>
+        </div>
     </div>
     
 </body>
