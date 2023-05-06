@@ -102,3 +102,18 @@ h1 {
     text-align: center;
     padding: 20px;
 }
+
+@media (max-width:914px) {
+        .responsive2,
+        .responsive3,
+        .responsive4,
+        .responsive5,
+        .responsive6 {
+            display: none;
+        }
+}
+@media (min-width:914px) {
+    .responsive9 {
+        display: none;
+    }
+}
