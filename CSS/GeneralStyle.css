@@ -247,7 +247,7 @@ body.swal2-height-auto {
         left: 50%;
         width: 100%;
         text-align: center;
-        background-color: var(--color-4);
+        background-color: #f65b5b;
         flex-direction: column;
     }
 }
