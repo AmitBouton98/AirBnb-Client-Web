@@ -77,11 +77,12 @@ i {
 #register {
     display: none;
 }
-
 #forget {
     display: none;
 }
-
+#resetpasswordForm{
+    display: none;
+}
 /*response of the mobile*/
 @media (max-width:450px) {
     .signInUpCard {
