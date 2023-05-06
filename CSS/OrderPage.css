@@ -51,7 +51,7 @@ select {
 table tr,
 td,
 #dataTableSection {
-    background-color:rgb(31 26 26 / 15%) !important;
+    background-color:rgb(0 0 0 / 15%) !important;
 }
 
 img {

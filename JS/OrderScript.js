@@ -31,8 +31,10 @@ function formatData() {
                 element.endDate.slice(0, 10),
                 element.pricePerNight,
                 // need to change the price per night in button update. devide it between the number of nights
-                `<button id="Flat${element.flatId}" onclick="ShowPickRangeOfDates(this , ${element.pricePerNight / ((new Date(element.endDate) - new Date(element.startDate)) / oneDayMs)}, UpdateOrder,${element.id})">update</button>`,
-                `<button onclick="DeleteOrder(${element.id})" >delete</button>`
+                `<img id="Flat${element.flatId}" onclick="ShowPickRangeOfDates(this , ${element.pricePerNight / ((new Date(element.endDate) - new Date(element.startDate)) / oneDayMs)}, UpdateOrder,${element.id})" src="../Data/image/5278658-removebg-preview.png"/>`,
+                //`<button onclick="DeleteOrder(${element.id})" >delete</button>`
+                // `<img id="Flat${element.flatId}" onclick="ShowPickRangeOfDates(this , ${element.pricePerNight / ((new Date(element.endDate) - new Date(element.startDate)) / oneDayMs)}, UpdateOrder,${element.id})" src="../Data/image/66-664202_update-button-clip-art-png-update-button-removebg-preview.png"/>`
+                `<img onclick="DeleteOrder(${element.id})" src="../Data/image/delete-icon-png-16x16-22.jpg" />`
             ]);
         }
         const dataTable = $("#table_id").DataTable({
