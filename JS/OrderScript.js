@@ -1,6 +1,7 @@
 $(document).ready(function () {
     formatData()
     document.querySelector("#userName").innerText = JSON.parse(localStorage.getItem("userName")).first + " " + JSON.parse(localStorage.getItem("userName")).last
+    document.querySelector(".userImage img").setAttribute("src",JSON.parse(localStorage.getItem("userName")).profile_img)
     // update details
     $('#UpdateDetailsButton').click(function () {
         UpdateDetails();
@@ -15,6 +16,7 @@ $(document).ready(function () {
         window.location.href = `../pages/index.html`
         return;
     }
+    
 });
 
 function formatData() {
