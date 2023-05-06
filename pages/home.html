@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,32 +24,28 @@
     <script src="../JS/ManageScript.js"></script>
     <script src="../JS/HomeScripts.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-
+    <script  src="../JS/navBar.js"></script>
 </head>
 
 <body onload="init('client')">
     <header id="mainHeader">
         <nav class="navBar">
             <img src="../Data/image/logo.png" alt="">
-            <section class="pages">
-                <a href="./home.html">Home</a> |
-                <a href="./manage.html">WishList</a> |
-                <a href="./Orders.html">Order</a>
+            <section>
+                <div id="pagesBar" onclick="showPages()"><i class="fa-solid fa-bars"></i></div>
+                <div class="pages">
+                    <a href="./home.html">Home</a> 
+                    <a href="./manage.html">WishList</a> 
+                    <a href="./Orders.html">Order</a>
+                </div>
             </section>
             <section class="user">
-                <p>welcome,
-                    <span id="userName"></span>
-                    <button id="UpdateDetailsButton">Update Details</button>
-                    <button class="buttonStyle" id="logoutButton">Log out</button>
-                </p>
-                <!-- <div class="dropdown">
-                    <button class="dropbtn">Welcome, <span id="userName"></span></button>
-                    <div class="dropdown-content">
-                        <a href="#">User Name</a>
-                        <a href="#" id="UpdateDetailsButton">Update Details</a>
-                        <a href="#" class="buttonStyle" id="logoutButton">Log out</a>
-                    </div>
-                </div> -->
+                <p>welcome, <span id="userName"></span></p>
+                <div id="settings" onclick="showSettings()"><i class="fa-solid fa-gear"></i> Settings</div>
+                <div class="settingList" >
+                    <div class="settingOption" id="UpdateDetailsButton">Update Details </div>
+                    <div class="settingOption" id="logoutButton">Log out </div>
+                </div>
             </section>
 
         </nav>
@@ -68,9 +65,8 @@
         </div>
     </section>
     <section class="appartmentSlider">
-
     </section>
-
+   
 </body>
 
 </html>

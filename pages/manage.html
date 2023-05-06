@@ -28,7 +28,7 @@
     <!-- Indludes for Picking date range amit-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js"></script>
-
+    <script defer src="../JS/navBar.js"></script>
     <!-- Indludes for Picking date range khaled-->
 </head>
 
@@ -36,18 +36,23 @@
     <header id="mainHeader">
         <nav class="navBar">
             <img src="../Data/image/logo.png" alt="">
-            <section class="pages">
-                <a href="./home.html">Home</a> |
-                <a href="./manage.html">WishList</a> |
-                <a href="./Orders.html">Order</a>
+            <section>
+                <div id="pagesBar" onclick="showPages()"><i class="fa-solid fa-bars"></i></div>
+                <div class="pages">
+                    <a href="./home.html">Home</a>
+                    <a href="./manage.html">WishList</a>
+                    <a href="./Orders.html">Order</a>
+                </div>
             </section>
             <section class="user">
-                <p>welcome,
-                    <span id="userName"></span>
-                    <button id="UpdateDetailsButton">Update Details</button>
-                    <button class="buttonStyle" id="logoutButton">Log out</button>
-                </p>
+                <p>welcome, <span id="userName"></span></p>
+                <div id="settings" onclick="showSettings()"><i class="fa-solid fa-gear"></i> Settings</div>
+                <div class="settingList">
+                    <div class="settingOption" id="UpdateDetailsButton">Update Details </div>
+                    <div class="settingOption" id="logoutButton">Log out </div>
+                </div>
             </section>
+    
         </nav>
     </header>
     <div class="searchFilter">
