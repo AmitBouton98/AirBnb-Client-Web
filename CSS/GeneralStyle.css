@@ -56,9 +56,23 @@ body.swal2-height-auto {
 
 .user {
     padding: 20px;
+    display: grid;
+    grid-template-areas: 
+    " nameArea  imgArea"
+    " settingsArea  imgArea";
 }
-
-
+.user img
+{
+    grid-area: imgArea;
+    width: 50px;
+    object-fit: contain;
+}
+.settingsArea {
+    grid-area: settingsArea;
+}
+.user p {
+    grid-area: nameArea;
+}
 /* img in head */
 .navBar img {
     height: 50%;
