@@ -8,7 +8,6 @@ function showSettings() {
     }
 }
 function showPages() {
-    console.log("yse")
     if ($('.pages').is(':visible')) {
         $('.pages').hide()
     } else {

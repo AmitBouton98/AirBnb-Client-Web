@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,68 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       #OrderInfoPart{
-        display: grid;
-        grid-template-areas: 
-        "orderid flatId imageId imageId"
-        "startDate endDate imageId imageId"
-        "price price  price closeBtn"
-        ;
-        background-color: gray;
-        border-radius: 25px;
-        padding: 10px;
-    } 
-       
-       #orderIdCell {
-        grid-area: orderid;
-       }
-       #flatOrderCell {
-        grid-area: flatId;
-       }
-       #imageCell {
-        grid-area: imageId;
-       }
-       #imageCell img {
-        width: 100%;
-        object-fit: fill ;
-       }
-       #startDateCell {
-        grid-area: startDate;
-       }
-       #endDateCell {
-        grid-area: endDate;
-       }
-       #priceCell {
-        grid-area: price;
-       }
-       #closeBtnCell {
-        grid-area: closeBtn;
-       }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #OrderInfoPart{
+            text-align: center;
+            margin: 10px auto;
+            background-color: gray;
+            height: 500px;
+            width: fit-content;
+            overflow: hidden;
+            border-top: 10px solid white;
+            border-bottom: 10px solid white;
+        }
+        #imageCell {
+            height: 50%;
+            border-top: 10px solid white;
+            border-bottom: 10px solid white;
+            overflow: hidden;
+        }
+        #imageCell img {
+            object-fit: cover;
+            width: 100%;
+        }
+        #OrderInfoCell {
+            padding: 10px;
+        }
+        #datesCell {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #footerCell button {
+            background-color: #f65b5b;
+            border-style: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #footerCell button:hover {
+            background-color: white;
+            color: #f65b5b;
+        }
     </style>
 </head>
 <body>
     <div id="OrderInfoPart">
-        <div id="orderIdCell">
-            <h1> Order Id: <span>123456</span> </h1>
-        </div>
-        <div id="flatOrderCell">
-            <h2> Order Id: <span>123456</span> </h2>
-        </div>
+        <h1>Order info</h1>
         <div id="imageCell">
             <img src="https://a0.muscache.com/pictures/10272854/8dcca016_original.jpg" alt="">
         </div>
-        <div id="startDateCell">
-        <h2> Order Id: <span>123456</span> </h2>
-        </div>
-        <div id="endDateCell">
-        <h2> Order Id: <span>123456</span> </h2>
-        </div>
-        <div id="priceCell">
-        <h2> Order Id: <span>123456</span> </h2>
-        </div>
-        <div id="closeBtnCell">
-            <button>close</button>
+        <div id="OrderInfoCell">
+            <div id="OrderIdsCell">
+                <h1>Order Id: <span id="OrderIdCell">123</span></h1>
+                <h2>Flat Id: <span id="FlatIdCell">123</span></h2>
+            </div>
+            <div id="datesCell">
+                <div class="DateCell">
+                    <h3>StartDate</h3>
+                    <p id="startDateCell">12/5/23 14:5</p>
+                </div>
+                <div class="DateCell">
+                    <h3>StartDate</h3>
+                    <p id="endDateCell">12/5/23 14:5</p>
+                </div>
+            </div>
+            <div id="footerCell">
+                <div id="priceCell">
+                    <h2>Order Price: <span id="OrderIdCell">123</span> $</h2>
+                </div>
+                <button onclick="document.querySelector('#OrderInfoPart').style.visability = 'hidden'">Close</button>
+            </div>
         </div>
     </div>
 </body>
-</html>
+</html> -->

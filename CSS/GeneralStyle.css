@@ -125,7 +125,7 @@ body.swal2-height-auto {
     position: absolute;
     transform: translate(-50%);
     left: 50%;
-    width: 100%;
+    width: 110%;
     text-align: center;
     display: none;
     background-color:#f65b5b ;
@@ -245,7 +245,7 @@ body.swal2-height-auto {
         position: absolute;
         transform: translate(-50%);
         left: 50%;
-        width: 100%;
+        width: 110%;
         text-align: center;
         background-color: #f65b5b;
         flex-direction: column;
