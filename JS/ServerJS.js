@@ -1,5 +1,5 @@
-// const api = "https://proj.ruppin.ac.il/cgroup17/test2/tar1/api"
-const api = "https://localhost:7297/api"
+const api = "https://proj.ruppin.ac.il/cgroup17/test2/tar1/api"
+// const api = "https://localhost:7297/api"
 function getFromServer(callback) {
     ajaxCall("GET", `${api}/Flats/Get?id=${JSON.parse(localStorage.getItem("userName")).id}`, "", function (data) {
         successMannagerCB(["Load", data]);
