@@ -246,7 +246,8 @@ function UpdateDetails() {
                     country,
                     email,
                     password,
-                    phoneNumber
+                    phoneNumber,
+                    profile_img : JSON.parse(localStorage.getItem("userName")).profile_img
                 };
             }
         },
