@@ -33,28 +33,34 @@
 </head>
 
 <body onload="init('manager')">
-    <header id="mainHeader">
-        <nav class="navBar">
-            <img src="../Data/image/logo.png" alt="">
-            <section>
-                <div id="pagesBar" onclick="showPages()"><i class="fa-solid fa-bars"></i></div>
-                <div class="pages">
-                    <a href="./home.html">Home</a>
-                    <a href="./manage.html">WishList</a>
-                    <a href="./Orders.html">Order</a>
-                </div>
-            </section>
-            <section class="user">
-                <p>welcome, <span id="userName"></span></p>
+<header id="mainHeader">
+    <nav class="navBar">
+        <img src="../Data/image/logo.png" alt="">
+        <section>
+            <div id="pagesBar" onclick="showPages()"><i class="fa-solid fa-bars"></i></div>
+            <div class="pages">
+                <a href="./home.html">Home</a>
+                <a href="./manage.html">WishList</a>
+                <a href="./Orders.html">Order</a>
+            </div>
+        </section>
+        <section class="user">
+            <div class="userImage">
+                <img
+                    src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Prescription02&hairColor=BrownDark&facialHairType=Blank&clotheType=ShirtScoopNeck&clotheColor=Gray01&eyeType=Default&eyebrowType=SadConcernedNatural&mouthType=Default&skinColor=Light' />
+            </div>
+            <p class="nameArea">welcome, <span id="userName"></span></p>
+            <div class="settingsArea">
                 <div id="settings" onclick="showSettings()"><i class="fa-solid fa-gear"></i> Settings</div>
                 <div class="settingList">
                     <div class="settingOption" id="UpdateDetailsButton">Update Details </div>
                     <div class="settingOption" id="logoutButton">Log out </div>
                 </div>
-            </section>
-    
-        </nav>
-    </header>
+            </div>
+        </section>
+
+    </nav>
+</header>
     <div class="searchFilter">
         <input type="button" id="all1" value="Show All" onclick="lambd:Get('all')">
         <div>

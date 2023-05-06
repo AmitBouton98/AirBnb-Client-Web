@@ -5,6 +5,7 @@
 
 body {
     background-color: #ECF2FF;
+    overflow-x: hidden;
 }
 
 /* set colors */
@@ -27,6 +28,7 @@ body.swal2-height-auto {
 
 /* navBar Class for head*/
 .navBar {
+    background-color: rgba(255, 255,255, 0.7);
     display: flex;
     /* overflow: hidden; */
     align-items: center;
@@ -55,24 +57,35 @@ body.swal2-height-auto {
 }
 
 .user {
-    padding: 20px;
+    text-align: center;
+    /* padding: 20px; */
     display: grid;
     grid-template-areas: 
-    " nameArea  imgArea"
-    " settingsArea  imgArea";
+    "imgArea nameArea"
+    "imgArea settingsArea ";
+    padding: 15px;
 }
-.user img
+.userImage
 {
+    text-align: center;
     grid-area: imgArea;
-    width: 50px;
-    object-fit: contain;
+    height: 70px;
+    width: 70px ;
+    object-fit: cover;
+}
+.userImage img {
+    height: 50px !important;
+    padding:10px !important;
+    object-fit: cover;
 }
 .settingsArea {
+    align-self: center;
     grid-area: settingsArea;
 }
-.user p {
+/* .nameArea
+{
     grid-area: nameArea;
-}
+} */
 /* img in head */
 .navBar img {
     height: 50%;
@@ -109,14 +122,13 @@ body.swal2-height-auto {
     cursor: pointer;
 }
 .settingList {
-    margin-top: 10px;
     position: absolute;
     transform: translate(-50%);
     left: 50%;
     width: 100%;
     text-align: center;
     display: none;
-    background-color:var(--color-4) ;
+    background-color:#f65b5b ;
     cursor: pointer;
 }
 .settingOption {
@@ -186,7 +198,7 @@ body.swal2-height-auto {
 /*calss to show background after scrolling */
 .scrolled {
     background-color: #d8e0e3;
-    position: sticky;
+    position: fixed;
     top: 0px;
 }
 #pagesBar {
@@ -223,6 +235,9 @@ body.swal2-height-auto {
     .navBar img {
         display: none;
     }
+    .userImage img {
+       display: block;
+    }
     #pagesBar {
         display: block;
     }
@@ -240,6 +255,13 @@ body.swal2-height-auto {
     .pages {
         visibility: visible !important;
         display: flex !important;
+    }
+    .settingList {
+        width: 230px !important;
+        transform: unset;
+        left: unset;
+        margin-top: 8px;
+        transform: translateX(-70px);
     }
 }
 
@@ -261,6 +283,9 @@ body.swal2-height-auto {
 }
 
 .user p {
+    align-self: center;
+    width: 100%;
+    grid-area: nameArea;
     color: #f65b5b;
 }
 
