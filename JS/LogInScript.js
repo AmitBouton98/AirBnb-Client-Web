@@ -10,11 +10,28 @@ const showPassword = (inputID, eyeIcon) => {
 }
 
 $(document).ready(function () {
-    
+    $('input[value="Create"]').hide()
     // add click event listener for form buttons
-    $('input[value="Back"]').click(() => showTheNeededSection("login"));
-    $('input[value="Forget Password?"]').click(() => showTheNeededSection("forget"));
-    $('input[value="REGISTER"]').click(() => showTheNeededSection("register"));
+    $('input[value="Back"]').click(()=> showTheNeededSection("login"));
+    $('input[value="Continue"]').click(()=> {
+        $(".lastley").show()
+        $(".firstlly").hide()
+        $('input[value="Continue"]').hide()
+        $('input[value="Create"]').show()
+        $('input[value="Back"]').click(()=>{
+            showTheNeededSection("register")
+            $(".lastley").hide()
+            $(".firstlly").show()
+            $('input[value="Create"]').hide()
+            $('input[value="Continue"]').show()
+            $('input[value="Back"]').click(()=>{
+                showTheNeededSection("login")
+            });
+        })
+    });
+    
+    $('input[value="Forget Password?"]').click(()=>showTheNeededSection("forget"));
+    $('input[value="REGISTER"]').click(()=> showTheNeededSection("register"));
 
     // submit the login form
     $('#Plogin').submit(loadUser)
@@ -37,8 +54,9 @@ function clearAllInputs(formEl) {
 }
 
 function RegisterUser() {
-    //showTheNeededSection("login")
-    PostRegisterUser((data) => console.log(data))
+    showTheNeededSection("login")
+    PostRegisterUser((data)=>console.log(data))
+    // $('input[value="Back"]').click()
     return false;
 }
 function loadUser() {

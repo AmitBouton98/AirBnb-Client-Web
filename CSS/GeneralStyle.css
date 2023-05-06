@@ -206,3 +206,10 @@ body.swal2-height-auto {
     border: none;
     cursor: pointer;
 }
+
+.avatars {
+    grid-template-columns: 1fr 1fr;
+}
+.avatars img {
+    width: 100%;
+}
