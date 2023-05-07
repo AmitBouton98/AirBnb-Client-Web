@@ -5,9 +5,14 @@
  .loader {
     position: absolute;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     background-color: #f25d62;
     display: flex;
     justify-content: center;
     align-items: center;
- }
+    transition: visibility 0.80s ,opacity 0.80s ;
+}
+.loader img {
+    width: 300px;
+    object-fit: contain;
+}
