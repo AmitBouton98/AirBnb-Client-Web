@@ -241,12 +241,11 @@ body.swal2-height-auto {
     .navBar img {
         display: none;
     }
-    .userImage img {
-       display: block;
-    }
-    #pagesBar {
+    
+    #pagesBar,.pages a,.userImage img {
         display: block;
     }
+    
     .pages {
         position: absolute;
         transform: translate(-50%);
@@ -255,6 +254,7 @@ body.swal2-height-auto {
         text-align: center;
         background-color: #f65b5b;
         flex-direction: column;
+        display: none;
     }
 }
 @media (min-width:730px) {
