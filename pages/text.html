@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,82 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        #OrderInfoPart{
-            text-align: center;
-            margin: 10px auto;
-            background-color: gray;
-            height: 500px;
-            width: fit-content;
-            overflow: hidden;
-            border-top: 10px solid white;
-            border-bottom: 10px solid white;
-        }
-        #imageCell {
-            height: 50%;
-            border-top: 10px solid white;
-            border-bottom: 10px solid white;
-            overflow: hidden;
-        }
-        #imageCell img {
-            object-fit: cover;
-            width: 100%;
-        }
-        #OrderInfoCell {
-            padding: 10px;
-        }
-        #datesCell {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        #footerCell button {
-            background-color: #f65b5b;
-            border-style: none;
-            border-radius: 5px;
-            padding: 10px;
-            font-size: 16px;
-            margin-top: 5px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        #footerCell button:hover {
-            background-color: white;
-            color: #f65b5b;
+        .loader-hidden {
+            opacity: 0;
+            visibility: hidden;
         }
     </style>
+    <script>
+        window.addEventListener("load",()=>{
+            const loader = document.querySelector(".loader")
+            loader.classList.add("loader-hidden")
+            loader.addEventListener("transitioned",()=>{
+                document.body.removeChild("loadre");
+            })
+        })
+
+    </script>
 </head>
 <body>
-    <div id="OrderInfoPart">
-        <h1>Order info</h1>
-        <div id="imageCell">
-            <img src="https://a0.muscache.com/pictures/10272854/8dcca016_original.jpg" alt="">
-        </div>
-        <div id="OrderInfoCell">
-            <div id="OrderIdsCell">
-                <h1>Order Id: <span id="OrderIdCell">123</span></h1>
-                <h2>Flat Id: <span id="FlatIdCell">123</span></h2>
-            </div>
-            <div id="datesCell">
-                <div class="DateCell">
-                    <h3>StartDate</h3>
-                    <p id="startDateCell">12/5/23 14:5</p>
-                </div>
-                <div class="DateCell">
-                    <h3>StartDate</h3>
-                    <p id="endDateCell">12/5/23 14:5</p>
-                </div>
-            </div>
-            <div id="footerCell">
-                <div id="priceCell">
-                    <h2>Order Price: <span id="OrderIdCell">123</span> $</h2>
-                </div>
-                <button onclick="document.querySelector('#OrderInfoPart').style.visability = 'hidden'">Close</button>
-            </div>
-        </div>
+    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+    <div class="loader">
+        loading...
     </div>
+
 </body>
-</html> -->
+</html>
