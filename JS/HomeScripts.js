@@ -24,6 +24,13 @@ function init(namePage) {
 
 
 function rendaer() {
+    $(".appartmentSlider").ready(()=>{
+         const loader = document.querySelector(".loader")
+        loader.classList.add("loader-hidden")
+        loader.addEventListener("transitioned",()=>{
+        document.body.removeChild("loadre");
+    })
+    })
     Arr.forEach(f => {
         createCard(f, "appartmentSlider");
     })

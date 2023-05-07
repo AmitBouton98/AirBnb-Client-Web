@@ -42,7 +42,7 @@ function formatData() {
                 `<i onclick="ShowOrderDetailes('${element.id}','${element.flatId}','${element.startDate.slice(0, 10)}','${element.endDate.slice(0, 10)}','${element.pricePerNight}','${flat.picture_url}')" class="fa-sharp fa-solid fa-eye"></i>`
             ]);
         }
-        $("#table_id").DataTable({
+        const table = $("#table_id").DataTable({
             "pageLength": 5,
             "lengthMenu": [5,10,100],
             "lengthChange": true,
@@ -60,6 +60,14 @@ function formatData() {
             ],
             'data': res
         });
+        
+        $("#table_id").ready(()=>{
+            const loader = document.querySelector(".loader")
+            loader.classList.add("loader-hidden")
+            loader.addEventListener("transitioned",()=>{
+                document.body.removeChild("loadre");
+            })
+        })
     })
 }
 function ShowOrderDetailes(orderId,flatId,startDate,endDate,price,flatImageUrl) {
