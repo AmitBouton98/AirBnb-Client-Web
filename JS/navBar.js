@@ -5,6 +5,10 @@ function showSettings() {
         if(!$('.pages').is(':visible') || $(window).width() >= 730) {
             $('.settingList').show()
         }
+        else{
+            $('.pages').hide()
+            $('.settingList').show()
+        }
     }
 }
 function showPages() {
@@ -13,6 +17,10 @@ function showPages() {
     } else {
         if(!$('.settingList').is(':visible')) {
             $('.pages').show()
+        }
+          else{
+            $('.pages').show()
+            $('.settingList').hide()
         }
     }
 

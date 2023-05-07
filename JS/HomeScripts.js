@@ -21,8 +21,8 @@ function init(namePage) {
     }
     document.querySelector("#userName").innerText = JSON.parse(localStorage.getItem("userName")).first + " " + JSON.parse(localStorage.getItem("userName")).last
     document.querySelector(".userImage img").setAttribute("src",JSON.parse(localStorage.getItem("userName")).profile_img)
-
 }
+
 
 
 function rendaer() {
