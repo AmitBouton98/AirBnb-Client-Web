@@ -319,3 +319,6 @@ body.swal2-height-auto {
 .avatars img {
     width: 100%;
 }
+#userEmailWelcome {
+    font-size: 23px;
+}

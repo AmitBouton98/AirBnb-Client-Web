@@ -108,6 +108,7 @@ i {
     border-radius: 15px;
     height: 30px;
     cursor: pointer;
+    padding: 0 10px;
 }
 
 #forgetButton {

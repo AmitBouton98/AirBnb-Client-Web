@@ -16,7 +16,9 @@ function init(namePage) {
     $('#UpdateDetailsButton').click(function () {
         UpdateDetails();
     });
-    if (namePage === 'client') rendaer()
+    if (namePage === 'client') {
+        rendaer()
+    }
     document.querySelector("#userName").innerText = JSON.parse(localStorage.getItem("userName")).first + " " + JSON.parse(localStorage.getItem("userName")).last
     document.querySelector(".userImage img").setAttribute("src",JSON.parse(localStorage.getItem("userName")).profile_img)
 
@@ -24,13 +26,6 @@ function init(namePage) {
 
 
 function rendaer() {
-    $(".appartmentSlider").ready(()=>{
-         const loader = document.querySelector(".loader")
-        loader.classList.add("loader-hidden")
-        loader.addEventListener("transitioned",()=>{
-        document.body.removeChild("loadre");
-    })
-    })
     Arr.forEach(f => {
         createCard(f, "appartmentSlider");
     })
